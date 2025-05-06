@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link Seguro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="lang-switch">
+      <button onclick="mudarIdioma('pt')">🇧🇷 PT</button>
+      <button onclick="mudarIdioma('en')">🇺🇸 EN</button>
+    </div>
+
+    <h1 id="titulo">🔒 Link Seguro</h1>
+    <p id="subtitulo">Valide aqui seu link de pagamento ou inscrição</p>
+
+    <form id="linkForm">
+      <input type="url" id="linkInput" placeholder="Cole o link aqui..." required />
+      <button type="submit" id="botaoValidar">Validar Link</button>
+    </form>
+
+    <div id="resultado" class="resultado oculto"></div>
+
+    <hr />
+    <div class="painel">
+      <h2 id="painelTitulo">📊 Painel Administrativo</h2>
+      <ul>
+        <li id="stat1">Instituições ativas: 10</li>
+        <li id="stat2">Links bloqueados/mês: 5.000</li>
+        <li id="stat3">Usuários capacitados: 50</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
