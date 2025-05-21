@@ -1,11 +1,30 @@
-version: "3.9"
+version: '3'
 
 services:
-  validador-link:
-    build: .
-    container_name: validador-link
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
     ports:
-      - "8001:8001"
-    env_file:
-      - .env
-    restart: unless-stopped
+      - "8980:8000"
+    environment:
+      - VT_API_KEY=${VT_API_KEY}
+    restart: always
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "99:80"
+    depends_on:
+      - backend
+    restart: always
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

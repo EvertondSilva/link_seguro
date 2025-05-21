@@ -42,3 +42,20 @@ O repositório está organizado da seguinte forma:
 
    ```bash
    git clone https://github.com/EvertondSilva/link_seguro.git
+
+
+
+
+   projeto/
+├── backend/
+│   ├── app.py (seu código FastAPI)
+│   ├── requirements.txt
+│   └── ...
+├── frontend/
+│   ├── index.html
+│   ├── script.js
+│   ├── style.css
+│   └── ...
+├── docker-compose.yml
+├── Dockerfile.backend
+└── Dockerfile.frontend
