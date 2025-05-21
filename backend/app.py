@@ -52,6 +52,7 @@ def analisar_url_virustotal(url):
     data = result.json()
     stats = data["data"]["attributes"]["stats"]["malicious"]
 
+    print(stats)
     if stats != 0:
         return "malicious"
     else:
