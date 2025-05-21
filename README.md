@@ -46,7 +46,10 @@ O repositório está organizado da seguinte forma:
 
 
 
-   projeto/
+
+```bash
+projeto/
+
 ├── backend/
 │   ├── app.py (seu código FastAPI)
 │   ├── requirements.txt
@@ -59,3 +62,4 @@ O repositório está organizado da seguinte forma:
 ├── docker-compose.yml
 ├── Dockerfile.backend
 └── Dockerfile.frontend
+
